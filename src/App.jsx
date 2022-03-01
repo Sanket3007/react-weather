@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='main'>
       <p className='app-label'>React Weather</p>
-      {city && weather ? (<WeatherInfo/>) : ( <City updateCity={updateCity} fetchWeather={fetchWeather}/>)}
+      {city && weather ? (<WeatherInfo weather={weather}/>) : ( <City updateCity={updateCity} fetchWeather={fetchWeather}/>)}
     </div>
   )
 }
