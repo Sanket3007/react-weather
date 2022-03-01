@@ -7,8 +7,8 @@ function App() {
   return (
     <div className='main'>
       <p className='app-label'>React Weather</p>
-      {/* <City/> */}
-      <WeatherInfo/>
+      <City/>
+      {/* <WeatherInfo/> */}
     </div>
   )
 }

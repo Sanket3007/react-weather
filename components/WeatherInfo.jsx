@@ -1,13 +1,22 @@
 import React from 'react';
 import './weatherinfo.css'
 
-const WeatherInfoComponent = () => {
+export const WeatherInfoIcons = {
+    sunset: "/icons/temp.svg",
+    sunrise: "/icons/temp.svg",
+    humidity: "/icons/humidity.svg",
+    wind: "/icons/wind.svg",
+    pressure: "/icons/pressure.svg",
+};
+
+const WeatherInfoComponent = (props) => {
+    const {name, value} = props;
     return (
         <div className="infocomponent">
-            <img src="/icons/temp.svg" alt="" className="info-icon" />
+            <img src={WeatherInfoIcons[name]} alt="" className="info-icon" />
             <p className="info-label">
-                19:47
-                <span>Sunrise</span>
+                {value}
+                <span>{name}</span>
             </p>
         </div>
     )
@@ -26,10 +35,10 @@ const WeatherInfo = () => {
             <p className="weather-info-label">Weather Info</p>
 
             <div className="info-container">
-                <WeatherInfoComponent />
-                <WeatherInfoComponent />
-                <WeatherInfoComponent />
-                <WeatherInfoComponent />
+                <WeatherInfoComponent name="sunrise" value="" />
+                <WeatherInfoComponent name="humidity" value="" />
+                <WeatherInfoComponent name="wind" value="" />
+                <WeatherInfoComponent name="pressure" value="" />
 
             </div>
         </>
